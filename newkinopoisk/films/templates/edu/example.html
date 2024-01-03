@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+
+<h1>{{title|upper}}</h1> <!-- |upper шаблоные фильтры builtins-->
+<p>{{menu|join:" "}}</p>
+<p>{{num_float}}</p>
+<p>{{num_int}}</p>
+<p>{{set}}</p>
+<p>{{dict.1}} это элемент словаря {{dict}}</p>
+<div>открытый атрибут - {{obj.a}} / закрытый атрибут - {{obj.b}}</div>
+<p> закрытый атрибут, взятый при помощи getter - {{obj.get_b}}</p>
+
+    ---------НАЧАЛО цикла for --------
+    {% for element in movies %}
+
+        </br>
+        <span>{{element.id}}</span></br>
+
+        {% if element.title == 'Movie1' %}
+            <p>САМЫЙ САМЫЙ ЛУЧШИЙ ФИЛЬМ</p>
+        {% else %}
+            <p>ну нормальный фильм</p>
+        {% endif %}
+
+        <span>{{element.title}}</span></br>
+        <span>{{element.description}}</span>
+
+        {% if not forloop.last %} <!--если НЕ последняя итерация, то показываем-->
+            <hr>
+        {% endif %}
+
+    {% endfor %}
+    --------------КОНЕЦ цикла for-----------
+
+</body>
+</html>

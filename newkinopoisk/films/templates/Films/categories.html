@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block  content %}
+<main>
+        <h2 class="Main_Title">Categories</h2>
+        {% for genre in genres %}
+        <!--переименовать class -->
+                <div class="movie">
+
+<img class="movie_img" src="{{ photo }}" alt="this is image of cat">
+                        <span class="title_movie">{{ genre }}</span>
+                </div>
+        {% endfor %}
+        <a href="http://127.0.0.1:8000/suggestion/"><button>suggest genre</button></a>
+</main>
+{% endblock %}

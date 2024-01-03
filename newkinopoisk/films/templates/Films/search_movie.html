@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block  content %}
+<main>
+        <h2 class="Main_Title">Movies</h2>
+        <!--показ ошибки или общее число найденных фильмов-->
+        {% if Error %}
+            <p>Results: {{Error}}</p>
+        {% else %}
+            <p>Results: {{response.totalResults}}</p>
+
+
+
+    <!--блоки с фильмами-->
+        {% for film in response.Search%}
+     <a href="http://127.0.0.1:8000/info_movie/{{ film.imdbID }}/">
+        <div class="movie" id="{{ film.imdbID }}">
+            {% if film.Poster == "N/A" %}
+            <img class="movie_img" src="{% static 'films/images/movie_base.jpg' %}" alt="this is image of movie">
+
+                {% else %}
+                <img class="movie_img" src="{{film.Poster}}" alt="this is image of movie">
+            {% endif %}
+            <span class="title_movie">{{film.Title}}</span>
+        </div>
+     </a>
+        {% endfor %}
+
+
+        <!--пагинация-->
+        <ul class="pagination">
+            <a href="/search_movie/page1/" class> <li> < </li> </a>
+
+            {% for number_page in count_pages %}
+                <a href="/search_movie/page{{number_page}}/"> <li>{{ number_page }}</li> </a>
+            {% endfor %}
+
+            <a href="/search_movie/page{{count_pages|last}}/"> <li> > </li> </a>
+        </ul>
+        {% endif %}
+
+</main>
+{% endblock %}

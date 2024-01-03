@@ -1,0 +1,242 @@
+body{
+margin:0;
+width: 100%;
+}
+header{
+margin-left: 50px;
+}
+
+footer{
+margin-left: 50px;
+  text-align: center;
+font-size: 10em;
+margin: 0;
+background: #330031;
+color: #fff;
+
+width: 100%;
+}
+
+main{
+margin-left: auto;
+margin-right: ;
+height: 100%px;
+width: 100%;
+}
+
+.movie{
+display: inline-block;
+width: 270px;
+height: 300px;
+position: relative;
+}
+
+.movie_img{
+height:300px;
+width: 250px;
+border-radius: 15px;
+
+
+}
+
+.Main_Title {
+margin:0;
+  text-align: center;
+font-size: 5em;
+color:#330031;
+}
+
+
+.title_movie {
+position:relative;
+display:inline-block;
+ left: auto;
+  right: auto;
+
+ bottom: 35px;
+    color: #fff;
+    font-size: 17px;
+    background: rgba(0, 0, 0, 0.5);
+
+    padding: 5px;
+    }
+
+
+.disk_film {
+margin-left: 40px;
+margin-right: 50px;
+}
+
+.description{
+padding-left: 25px;
+font-size: 2em;
+}
+
+ul {
+
+  list-style: none; /*убираем маркеры списка*/
+  margin: 0; /*убираем верхнее и нижнее поле, равное 1em*/
+  padding-left: 0; /*убираем левый отступ, равный 40px*/
+}
+a {text-decoration: none; /*убираем подчеркивание текста ссылок*/}
+nav {
+  display: block;
+  margin-left: 50px;
+}
+.one ul {
+  padding: 1em 0;
+}
+.one a {
+  padding: 1em;
+
+  color: #000;
+}
+.one a:hover {background: #330031; color: #fff}
+.one li {
+  display: inline;
+}
+.account {
+margin-right: 50px;
+margin-top: 15px;
+float:right;
+}
+
+
+/*field search*/
+
+form {
+  position: relative;
+
+  margin: 0 auto;
+  display: inline;
+}
+.d7 ::placeholder{
+  color:#fff;
+}
+
+.d7 form {
+  width: auto;
+  margin-right: 30px;
+}
+.d7 input {
+  width: 250px;
+  height: 42px;
+  padding-left: 15px;
+  border-radius: 42px;
+  border: 2px solid #fff;
+  background: #CCCEFF;
+  outline: none;
+  position: relative;
+  transition: .3s linear;
+}
+.d7 input:focus {
+  width: 300px;
+}
+.d7 button {
+  width: 42px;
+  height: 42px;
+  background: none;
+  border: none;
+  position: absolute;
+  top: -2px;
+  right: 0;
+}
+
+.d7 button:before{
+  content: "\🔍︎";
+  font-family: FontAwesome;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  font-size: 2em;
+  color: #fff;
+}
+
+
+
+ul.pagination{
+display: flex;
+}
+.pagination a{
+margin-left: 5px;
+}
+
+
+
+.header1{
+color: #330031;
+letter-spacing: 0.5em;
+font-size: 2em;
+}
+.header2{
+letter-spacing: 0.25em;
+}
+.header2, .text_content{
+font-size: 1.5em;
+color: white;
+
+}
+.suggest{
+margin-top: 5%;
+margin-bottom: 5%;
+height: 100%;
+display: block;
+background-color:#330031;
+color: white;
+width: 400px;
+font-size: 1.5em;
+}
+.suggest label{
+margin: 5px;
+}
+.suggest-btn{
+height: 50px;
+}
+textarea {
+width: 100%;
+height: 100px;
+  resize: none;
+}
+.suggest input, .suggest textarea{
+margin: 7px;
+width: 93%;
+}
+
+
+.content_about_us tbody{
+margin-left: 5%;
+}
+
+.content_about_us
+{
+padding-left: 10%;
+margin-left: auto;
+margin-right: auto;
+width: 85%;
+height: 85%;
+padding: 10px;
+margin-bottom: 30px;
+
+
+ background-image: linear-gradient(to bottom right,#2649FF 20%,#F4CAC0 ,#FFF3B0 );
+ border-radius: 1%;
+ border-bottom-right-radius: 25%;
+}
+.content_about_us img{
+
+width: 100%;
+}
+.img_sofa{
+width: 50%;
+}
+.btn-start{
+margin-top: 10%;
+margin-left:50%;
+
+
+border-radius: 100px;
+font-size: 1.5em;
+width: 200px;
+height: 50px;
+background-color: #330031;
+color: #FFCCFD;
+}

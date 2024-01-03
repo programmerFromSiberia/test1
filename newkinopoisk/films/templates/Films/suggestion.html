@@ -1,0 +1,18 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block  content %}
+
+
+<form class="suggest" method="POST" action="">
+    {% csrf_token %}
+
+<!--    <label> title <input type="text" name="title"></label>-->
+<!--    <label> content <textarea name="content"></textarea></label>-->
+<!--    <label> photo <input type="file" name="photo"></label>-->
+    {{ form }} <!--form.as_p -> <p>   <label><tag_element_of_form></label>  </p>-->
+    <label> <input class="suggest-btn" type="submit" name="submit" text="suggest"></label>
+
+</form>
+{% endblock %}
